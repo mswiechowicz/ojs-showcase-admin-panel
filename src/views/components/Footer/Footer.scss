@@ -1,0 +1,33 @@
+@import '../../../assets/styles/variables.scss';
+
+.footer {
+  padding: 0 1rem 0 0;
+  height: 6rem;
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 3rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: 15px;
+  transition: top .5s ease-in-out;
+
+  a {
+    color: $blue--alpha-75;
+    text-decoration: none;
+  }
+
+  p, a {
+    font-size: 1.2rem;
+    padding-right: 5px;
+  }
+
+  &__black {
+    color: black;
+  }
+
+  &__blue {
+    color: $blue--alpha-75;
+  }
+}

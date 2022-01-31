@@ -1,0 +1,92 @@
+@import '../../../assets/styles/variables.scss';
+
+.nav {
+  padding: 0 1rem 0 0;
+  height: 6rem;
+  color: $blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  z-index: 5;
+  position: sticky;
+  top: 1rem;
+  left: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  transition: top .5s ease-in-out;
+  > * {
+    height: 100%;
+    align-items: center;
+  }
+
+  &__logo {
+    background-image: url('../../../assets/images/logoBlue.png');
+    background-size: contain;
+    background-position: center;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    min-width: 100px;
+    width: auto;
+  }
+
+  &__operator {
+    border-left: 1px solid $blue;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    flex-grow: 1;
+    height: max-content;
+    user-select: none;
+
+    span{
+      font-size: 1.1rem;
+      font-weight: 700;
+
+      & ~ span {
+        font-weight: 400;
+        margin-left: .25rem;
+      }
+    }
+  }
+
+  &__menu {
+    font-weight: 700;
+    width: auto;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    > * {
+      margin: 0 1rem;
+      cursor: pointer;
+      align-items: center;
+    }
+  }
+}
+
+.nav-option{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    color: $green;
+  }
+
+  &__name{
+    font-size: 0.9rem;
+  }
+
+  &--logout{
+    @extend .nav-option__name;
+    color: $red--alpha-75;
+
+    &:hover{
+      color: $red;
+    }
+  }
+}
