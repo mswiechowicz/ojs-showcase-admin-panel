@@ -2,11 +2,11 @@
   "name": "ojs-showcase-admin-panel",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build",
+    "build": "parcel build src/index.html",
+    "build:report": "parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer\n",
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "eslint 'src/**/*.js' --fix"
   },
