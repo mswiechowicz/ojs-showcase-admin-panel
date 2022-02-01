@@ -31,11 +31,13 @@ class Modal {
 
   unmount() {
     this.modalRef.target.remove();
+    document.body.classList.remove('scroll-block');
   }
 
   mount(body) {
     const html = this.build(body);
     oRender(document.body, html);
+    document.body.classList.add('scroll-block');
   }
 }
 
