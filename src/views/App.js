@@ -6,13 +6,13 @@ import { Footer } from './components/Footer/Footer';
 import './App.scss';
 
 class App extends oView {
-	build() {
-		return oFragment(
-			new Navbar(),
-			new Main(),
-			new Footer(),
-		).init();
-	}
+  build() {
+    return oFragment(
+      new Navbar(),
+      new Main(),
+      new Footer(),
+    ).init();
+  }
 }
 
 export { App };
